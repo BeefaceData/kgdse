@@ -4,6 +4,8 @@ A traceable evidence graph that links knowledge graph (KG) research categories, 
 datasets used for them, and every link to its location in the published literature. It was built through a
 systematic mapping study (Kitchenham and Charters guidelines; PRISMA 2020 reporting).
 
+**Browse:** https://beefacedata.github.io/kgdse/ (datasets, taxonomy, every record with its evidence location).
+
 **Status:** version 0.1.0 (pre-release, 14 Nov 2026). Persistent identifier https://w3id.org/kgdse (being registered); DOI to follow (Zenodo).
 
 ## What is in it
@@ -26,7 +28,8 @@ extraction; every decision is logged in the graph (`kd:Decision`) and in `data/j
 - `queries/cq1.rq` ... `cq8.rq`: competency queries (questions in `model/competency_questions.txt`), first results in `queries/results_summary.txt`.
 - `data/csv/`: evidence records, reports, peripheral records, datasets (with descriptors and samples), dataset links, variants.
 - `data/json/`: the build inputs (`master.json`, `registry.json`).
-- `scripts/`: `build_rdf.py` (JSON -> RDF), `validate.py` (SHACL + count checks), `competency_queries.py`.
+- `scripts/`: `build_rdf.py` (JSON -> RDF), `validate.py` (SHACL + count checks), `competency_queries.py`, `build_site.py` (website data).
+- `docs/`: the website (GitHub Pages; plain HTML, CSS and JavaScript, no external libraries or tracking).
 
 ## Quick start
 ```bash
