@@ -1,0 +1,328 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix kd: <https://w3id.org/kgdse/vocab#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/kgdse/vocab> a owl:Ontology ;
+    rdfs:label "KG-DSE vocabulary"@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "0.1.0" .
+
+kd:DatasetUseRecord a owl:Class ;
+    rdfs:label "Dataset-use record"@en ;
+    rdfs:comment "One documented use of one or more datasets in one included study, with its location in the report."@en ;
+    rdfs:subClassOf prov:Entity .
+
+kd:Decision a owl:Class ;
+    rdfs:label "Review decision"@en ;
+    rdfs:comment "A logged decision of the reviewer that changed coding or data."@en ;
+    rdfs:subClassOf prov:Activity .
+
+kd:DescriptorEvidence a owl:Class ;
+    rdfs:label "Descriptor evidence"@en ;
+    rdfs:comment "Source and quote supporting one descriptor value of a dataset."@en .
+
+kd:Domain a owl:Class ;
+    rdfs:label "Application domain"@en ;
+    rdfs:comment "Application domain of a record."@en ;
+    rdfs:subClassOf skos:Concept .
+
+kd:Facet a owl:Class ;
+    rdfs:label "Facet"@en ;
+    rdfs:comment "Cross-cutting characteristic of a record (e.g. temporal, multimodal)."@en ;
+    rdfs:subClassOf skos:Concept .
+
+kd:PeripheralRecord a owl:Class ;
+    rdfs:label "Peripheral record"@en ;
+    rdfs:comment "A documented dataset use in a study with no KG component; kept apart and not counted in the analysis."@en ;
+    rdfs:subClassOf prov:Entity .
+
+kd:Report a owl:Class ;
+    rdfs:label "Report"@en ;
+    rdfs:comment "A publication assessed in full text (included or excluded)."@en ;
+    rdfs:subClassOf dcterms:BibliographicResource .
+
+kd:ResearchCategory a owl:Class ;
+    rdfs:label "Research category"@en ;
+    rdfs:comment "Top-level research category of the taxonomy."@en ;
+    rdfs:subClassOf skos:Concept .
+
+kd:Role a owl:Class ;
+    rdfs:label "Documented-use role"@en ;
+    rdfs:comment "Role a dataset played in a study (introduced, training, testing, ...)."@en ;
+    rdfs:subClassOf skos:Concept .
+
+kd:Sample a owl:Class ;
+    rdfs:label "Dataset sample"@en ;
+    rdfs:comment "One real item or record from a dataset, with its exact source and licence."@en .
+
+kd:Study a owl:Class ;
+    rdfs:label "Study"@en ;
+    rdfs:comment "A unique study; one or more reports (duplicate publications merged)."@en .
+
+kd:Subtask a owl:Class ;
+    rdfs:label "Subtask"@en ;
+    rdfs:comment "Controlled task under a research category."@en ;
+    rdfs:subClassOf skos:Concept .
+
+kd:accessNote a owl:DatatypeProperty ;
+    rdfs:label "access note"@en ;
+    rdfs:comment "Code and data availability as stated in the report."@en .
+
+kd:accessStatus a owl:DatatypeProperty ;
+    rdfs:label "access status"@en ;
+    rdfs:comment "Checked on the release page."@en .
+
+kd:authorsShort a owl:DatatypeProperty ;
+    rdfs:label "authors (short)"@en ;
+    rdfs:comment "Short author list."@en .
+
+kd:batch a owl:DatatypeProperty ;
+    rdfs:label "batch"@en ;
+    rdfs:comment "Review batch number."@en .
+
+kd:codingNote a owl:DatatypeProperty ;
+    rdfs:label "coding note"@en ;
+    rdfs:comment "Note on how the record was coded."@en .
+
+kd:creationMethod a owl:DatatypeProperty ;
+    rdfs:label "creation method"@en .
+
+kd:datasetVersionText a owl:DatatypeProperty ;
+    rdfs:label "dataset version text"@en ;
+    rdfs:comment "Dataset, version and size as stated in the source."@en .
+
+kd:decidedBy a owl:ObjectProperty ;
+    rdfs:label "decided by"@en ;
+    rdfs:comment "Agent who decided."@en .
+
+kd:decision a owl:DatatypeProperty ;
+    rdfs:label "screening decision"@en ;
+    rdfs:comment "Include or Exclude."@en .
+
+kd:decisionGroup a owl:DatatypeProperty ;
+    rdfs:label "decision group"@en .
+
+kd:derivedFromNote a owl:DatatypeProperty ;
+    rdfs:label "derived from (note)"@en ;
+    rdfs:comment "Stated parent dataset(s)."@en .
+
+kd:descriptorEvidence a owl:ObjectProperty ;
+    rdfs:label "descriptor evidence"@en ;
+    rdfs:comment "Evidence for a descriptor value."@en .
+
+kd:descriptorStatus a owl:DatatypeProperty ;
+    rdfs:label "descriptor status"@en ;
+    rdfs:comment "coded / not checked / merged."@en .
+
+kd:documentedUse a owl:DatatypeProperty ;
+    rdfs:label "documented use"@en ;
+    rdfs:comment "What the study did with the dataset."@en .
+
+kd:domain a owl:ObjectProperty ;
+    rdfs:label "domain"@en ;
+    rdfs:comment "Application domain of the record."@en .
+
+kd:duplicateOf a owl:ObjectProperty ;
+    rdfs:label "duplicate of"@en ;
+    rdfs:comment "Report this one duplicates (merged study)."@en .
+
+kd:evidenceLocation a owl:DatatypeProperty ;
+    rdfs:label "evidence location"@en ;
+    rdfs:comment "Section, table and page of the evidence."@en .
+
+kd:facet a owl:ObjectProperty ;
+    rdfs:label "facet"@en ;
+    rdfs:comment "Facet of the record."@en .
+
+kd:field a owl:DatatypeProperty ;
+    rdfs:label "field"@en ;
+    rdfs:comment "Descriptor field the evidence supports."@en .
+
+kd:fromReport a owl:ObjectProperty ;
+    rdfs:label "from report"@en ;
+    rdfs:comment "The report in which the use is documented."@en .
+
+kd:humanVerification a owl:DatatypeProperty ;
+    rdfs:label "human verification"@en .
+
+kd:identificationRoute a owl:DatatypeProperty ;
+    rdfs:label "identification route"@en ;
+    rdfs:comment "How the report was found."@en .
+
+kd:inputSource a owl:DatatypeProperty ;
+    rdfs:label "input source"@en .
+
+kd:inputType a owl:DatatypeProperty ;
+    rdfs:label "input type"@en .
+
+kd:inputUnit a owl:DatatypeProperty ;
+    rdfs:label "input unit"@en .
+
+kd:introducedIn a owl:ObjectProperty ;
+    rdfs:label "introduced in"@en ;
+    rdfs:comment "Study in the corpus that introduced or derived the dataset."@en .
+
+kd:introducingSource a owl:DatatypeProperty ;
+    rdfs:label "introducing source"@en ;
+    rdfs:comment "Citation of the source that introduced the dataset."@en .
+
+kd:licenceText a owl:DatatypeProperty ;
+    rdfs:label "licence (as stated)"@en .
+
+kd:limitationDataset a owl:DatatypeProperty ;
+    rdfs:label "dataset limitation (DL)"@en ;
+    rdfs:comment "Author-reported limitation of the dataset."@en .
+
+kd:metric a owl:DatatypeProperty ;
+    rdfs:label "metric"@en ;
+    rdfs:comment "Evaluation metric named in the record (keyword rules)."@en .
+
+kd:note a owl:DatatypeProperty ;
+    rdfs:label "note"@en .
+
+kd:objective a owl:DatatypeProperty ;
+    rdfs:label "objective"@en ;
+    rdfs:comment "Objective of the study (paraphrased)."@en .
+
+kd:officialExampleURL a owl:DatatypeProperty ;
+    rdfs:label "official example URL"@en .
+
+kd:originalCategory a owl:ObjectProperty ;
+    rdfs:label "original category"@en ;
+    rdfs:comment "Category before a logged category move."@en .
+
+kd:outcome a owl:DatatypeProperty ;
+    rdfs:label "outcome"@en .
+
+kd:outputType a owl:DatatypeProperty ;
+    rdfs:label "output type"@en .
+
+kd:outputUnit a owl:DatatypeProperty ;
+    rdfs:label "output unit"@en .
+
+kd:pageConvention a owl:DatatypeProperty ;
+    rdfs:label "page convention"@en ;
+    rdfs:comment "Whether pages are printed or PDF pages."@en .
+
+kd:proposal a owl:DatatypeProperty ;
+    rdfs:label "proposal"@en .
+
+kd:publicationStatus a owl:DatatypeProperty ;
+    rdfs:label "publication status"@en ;
+    rdfs:comment "Published, preprint only, ..."@en .
+
+kd:quote a owl:DatatypeProperty ;
+    rdfs:label "quote"@en ;
+    rdfs:comment "Verbatim quote of at most 25 words."@en .
+
+kd:reason a owl:DatatypeProperty ;
+    rdfs:label "reason"@en ;
+    rdfs:comment "Reason for the screening decision."@en .
+
+kd:recordCount a owl:DatatypeProperty ;
+    rdfs:label "record count"@en ;
+    rdfs:comment "Active records linked to the dataset."@en .
+
+kd:recordStatus a owl:DatatypeProperty ;
+    rdfs:label "record status"@en ;
+    rdfs:comment "active or superseded."@en .
+
+kd:reproduce a owl:DatatypeProperty ;
+    rdfs:label "reproduce"@en ;
+    rdfs:comment "Whether the licence permits reproducing the sample."@en .
+
+kd:researchCategory a owl:ObjectProperty ;
+    rdfs:label "research category"@en ;
+    rdfs:comment "Research category of the record."@en .
+
+kd:resourceKind a owl:DatatypeProperty ;
+    rdfs:label "resource kind"@en ;
+    rdfs:comment "Task benchmark, knowledge graph, ontology, ..."@en .
+
+kd:reviewedVersion a owl:DatatypeProperty ;
+    rdfs:label "reviewed version"@en ;
+    rdfs:comment "Version actually reviewed, where the citation gives a published version."@en .
+
+kd:reviewerInterpretation a owl:DatatypeProperty ;
+    rdfs:label "reviewer interpretation (RI)"@en ;
+    rdfs:comment "Reviewer observation, kept apart from author statements."@en .
+
+kd:role a owl:ObjectProperty ;
+    rdfs:label "role"@en ;
+    rdfs:comment "Documented-use role."@en .
+
+kd:sample a owl:ObjectProperty ;
+    rdfs:label "sample"@en ;
+    rdfs:comment "A real sample of the dataset."@en .
+
+kd:sampleInput a owl:DatatypeProperty ;
+    rdfs:label "sample input"@en .
+
+kd:sampleOutput a owl:DatatypeProperty ;
+    rdfs:label "sample output"@en .
+
+kd:scopeStudy a owl:DatatypeProperty ;
+    rdfs:label "study scope (SS)"@en ;
+    rdfs:comment "Scope or limitation of the study."@en .
+
+kd:selection a owl:DatatypeProperty ;
+    rdfs:label "selection"@en ;
+    rdfs:comment "First item or chosen for readability."@en .
+
+kd:size a owl:DatatypeProperty ;
+    rdfs:label "size"@en ;
+    rdfs:comment "As stated in the introducing source."@en .
+
+kd:study a owl:ObjectProperty ;
+    rdfs:label "study"@en ;
+    rdfs:comment "The study a report or record belongs to."@en .
+
+kd:studyCount a owl:DatatypeProperty ;
+    rdfs:label "study count"@en ;
+    rdfs:comment "Distinct studies among them."@en .
+
+kd:subtask a owl:ObjectProperty ;
+    rdfs:label "subtask"@en ;
+    rdfs:comment "Controlled subtask of the record."@en .
+
+kd:subtaskBasis a owl:DatatypeProperty ;
+    rdfs:label "subtask basis"@en ;
+    rdfs:comment "Rule or evidence that set the subtask."@en .
+
+kd:supersededBy a owl:ObjectProperty ;
+    rdfs:label "superseded by"@en ;
+    rdfs:comment "Record replacing this one after a duplicate merge."@en .
+
+kd:targetSource a owl:DatatypeProperty ;
+    rdfs:label "target source"@en .
+
+kd:taskDescription a owl:DatatypeProperty ;
+    rdfs:label "task description"@en ;
+    rdfs:comment "Task as described in the source (free text)."@en .
+
+kd:usesDataset a owl:ObjectProperty ;
+    rdfs:label "uses dataset"@en ;
+    rdfs:comment "Canonical dataset used in the record."@en .
+
+kd:usesVariant a owl:ObjectProperty ;
+    rdfs:label "uses variant"@en ;
+    rdfs:comment "Dataset variant used in the record."@en .
+
+kd:variantOf a owl:ObjectProperty ;
+    rdfs:label "variant of"@en ;
+    rdfs:comment "Canonical dataset this variant belongs to."@en .
+
+kd:variantType a owl:DatatypeProperty ;
+    rdfs:label "variant type"@en .
+
+kd:versionBasis a owl:DatatypeProperty ;
+    rdfs:label "version basis"@en ;
+    rdfs:comment "Text that established the version."@en .
+
+kd:versionStatus a owl:DatatypeProperty ;
+    rdfs:label "version status"@en ;
+    rdfs:comment "\"version stated\" or \"version not stated\"."@en .
+

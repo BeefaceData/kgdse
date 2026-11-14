@@ -17,6 +17,10 @@ for a, b in CP: shutil.copy2(os.path.join(RES, a), os.path.join(OUT, b))
 SITE = os.path.join(RES, '04_website', 'site'); DOCS = os.path.join(OUT, 'docs')
 if os.path.isdir(DOCS): shutil.rmtree(DOCS)
 shutil.copytree(SITE, DOCS); open(os.path.join(DOCS, '.nojekyll'), 'w').close()
+# RDF served from Pages too (w3id content negotiation targets these)
+os.makedirs(os.path.join(DOCS, 'rdf'), exist_ok=True)
+for a, b in (('02_data/kgdse.ttl', 'kgdse.ttl'), ('02_data/kgdse.nt', 'kgdse.nt'), ('01_model/kgdse-vocab.ttl', 'kgdse-vocab.ttl'), ('01_model/kgdse-shapes.ttl', 'kgdse-shapes.ttl')):
+    shutil.copy2(os.path.join(RES, a), os.path.join(DOCS, 'rdf', b))
 shutil.copy2(os.path.join(ROOT, 'Master Table', 'master.json'), os.path.join(OUT, 'data/json/master.json'))
 shutil.copy2(os.path.join(ROOT, 'Dataset Registry', 'registry.json'), os.path.join(OUT, 'data/json/registry.json'))
 for a, b in (('master_evidence.csv', 'evidence.csv'), ('master_reports.csv', 'reports.csv'), ('master_peripheral.csv', 'peripheral.csv')):

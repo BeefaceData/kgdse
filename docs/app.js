@@ -27,7 +27,9 @@ function route() {
   const h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
   const [kind, id] = h.split('/');
   const pages = { '': overview, datasets: datasetList, taxonomy: taxonomy, data: dataPage, dataset: () => dataset(id), record: () => record(id),
-    subtask: () => subtask(id), category: () => category(id), report: () => report(id) };
+    subtask: () => subtask(id), category: () => category(id), report: () => report(id),
+    study: () => report(id),   // a study's identifier is its canonical report key
+    variant: () => { const p = S.datasets.find(x => x.variants.some(v => v[0] === id)); return p ? dataset(p.id) : notFound('variant', id); } };
   (pages[kind] || overview)();
   view.focus({ preventScroll: true }); window.scrollTo(0, 0);
 }
