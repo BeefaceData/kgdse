@@ -1,0 +1,9 @@
+Competency questions (drive the model, the website and the paper's validation)
+CQ1  Which datasets have been used for subtask X, by which studies, and where is the evidence?
+CQ2  For dataset D: in which categories and roles has it been used, by whom, and which variants exist?
+CQ3  Which datasets have author-reported dataset limitations (e.g. leakage, label error)?
+CQ4  Which dataset uses do not report a version?
+CQ5  Which datasets were introduced in the corpus and later reused by other studies in it?
+CQ6  Which categories rely on fewer than k distinct datasets?
+CQ7  Which datasets are closed or proprietary?
+CQ8  Where can dataset D be obtained (repository or DOI link)?

@@ -1,0 +1,10 @@
+SHACL conforms: True | violations: 0
+Count checks: 30 run, 0 mismatches
+  active records: 1690
+  included reports: 869
+  excluded reports: 216
+  included studies: 867
+  live datasets (records > 0): 1203
+  records with RI: 944
+  version not stated: 1399
+Unmapped source values: 0

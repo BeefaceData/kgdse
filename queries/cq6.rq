@@ -1,0 +1,9 @@
+# CQ6: Which research categories rely on fewer than k (here 20) distinct datasets?
+PREFIX kd: <https://w3id.org/kgdse/vocab#>
+PREFIX kgdse: <https://w3id.org/kgdse/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?category (COUNT(DISTINCT ?d) AS ?datasets) (COUNT(DISTINCT ?r) AS ?records)
+WHERE { ?r kd:recordStatus "active" ; kd:researchCategory ?c ; kd:usesDataset ?d . ?c skos:prefLabel ?category }
+GROUP BY ?category HAVING (COUNT(DISTINCT ?d) < 20) ORDER BY ?datasets

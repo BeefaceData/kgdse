@@ -1,0 +1,51 @@
+variant_id,variant_name,variant_of_id,variant_of,variant_type,records
+KGV-001,LC-QuAD 2.0,KGD-0018,LC-QuAD,version,7
+KGV-002,QALD-9,KGD-0020,QALD,version,7
+KGV-003,YAGO (TKG extrapolation version),KGD-0014,YAGO,modality/temporal extension,6
+KGV-004,FB15k-237 inductive (GraIL v1-v4),KGD-0001,FB15k-237,split/subset,5
+KGV-005,LC-QuAD 1.0,KGD-0018,LC-QuAD,version,5
+KGV-006,WN18RR inductive (GraIL v1-v4),KGD-0002,WN18RR,split/subset,5
+KGV-007,FB15k-237-IMG,KGD-0001,FB15k-237,modality/temporal extension,4
+KGV-008,NELL-995 inductive (GraIL v1-v4),KGD-0010,NELL-995,split/subset,4
+KGV-009,NYT (Riedel distant supervision),KGD-0045,NYT,derived,4
+KGV-010,WN18-IMG,KGD-0007,WN18,modality/temporal extension,4
+KGV-011,FB2M (Freebase subset),KGD-0063,FB2M,split/subset,3
+KGV-012,QALD-10,KGD-0020,QALD,version,3
+KGV-013,Wikidata TKG (CronQuestions),KGD-0003,Wikidata,derived (temporal KG),3
+KGV-014,BTC 2012,KGD-0107,BTC,version,2
+KGV-015,FB15k-237-literals,KGD-0001,FB15k-237,modality/temporal extension,2
+KGV-016,SemTab 2019,KGD-0094,SemTab,version,2
+KGV-017,SemTab 2020,KGD-0094,SemTab,version,2
+KGV-018,Wikidata (edit history),KGD-0003,Wikidata,derived (edit history),2
+KGV-019,YAGO15K (temporal),KGD-0073,YAGO15K,modality/temporal extension,2
+KGV-020,BSBM (SANSA CSV variant),KGD-0039,BSBM,derived (format),1
+KGV-021,C-MAPSS TKG (IEEE DataPort),KGD-0449,C-MAPSS,derived (temporal KG),1
+KGV-022,FB15k-237 (multimodal),KGD-0001,FB15k-237,modality/temporal extension,1
+KGV-023,FB15k-237 few-shot (FKGC split),KGD-0001,FB15k-237,split/subset,1
+KGV-024,"FB15k-237 inductive (BLP, Daza et al.)",KGD-0001,FB15k-237,split/subset,1
+KGV-025,FB15k-237 inductive (multimodal),KGD-0001,FB15k-237,split/subset,1
+KGV-026,FB15k-237 sparse subsets (Lv 2020),KGD-0001,FB15k-237,split/subset,1
+KGV-027,FB15k-literals,KGD-0006,FB15k,modality/temporal extension,1
+KGV-028,KEGG (drug),KGD-0052,KEGG,subset,1
+KGV-029,Last-FM (KGAT KG version),KGD-0065,Last-FM,version,1
+KGV-030,Last.FM (HetRec 2011),KGD-0065,Last-FM,version,1
+KGV-031,MovieLens (10M extension),KGD-0067,MovieLens,version,1
+KGV-032,PubMed (KARMA corpora),KGD-0092,PubMed,subset,1
+KGV-033,QALD (QALD-4 to QALD-9),KGD-0020,QALD,version (editions 4 to 9),1
+KGV-034,QALD-1,KGD-0020,QALD,version,1
+KGV-035,QALD-9 Plus,KGD-0020,QALD,version,1
+KGV-036,QALD-9-plus,KGD-0020,QALD,version,1
+KGV-037,RxNorm (Babylon LDG),KGD-0147,RxNorm,derived,1
+KGV-038,SemEval-2010 Task 8 (causal subset SemEvalc),KGD-0307,SemEval-2010 Task 8,split/subset,1
+KGV-039,Wikidata (artworks),KGD-0003,Wikidata,subset,1
+KGV-040,Wikidata (Disease class),KGD-0003,Wikidata,subset,1
+KGV-041,Wikidata (entity context),KGD-0003,Wikidata,subset,1
+KGV-042,Wikidata (Ethiopia extension),KGD-0003,Wikidata,derived (domain extension),1
+KGV-043,Wikidata (Wiki79k / Wiki143k),KGD-0003,Wikidata,subset,1
+KGV-044,Wikidata5M (MMKG),KGD-0072,Wikidata5M,modality/temporal extension,1
+KGV-045,Wikidata5M (seed entities),KGD-0072,Wikidata5M,split/subset,1
+KGV-046,Wikipedia tables (Freebase),KGD-0159,Wikipedia tables,derived,1
+KGV-047,Wiktionary (DBnary),KGD-0351,Wiktionary,derived,1
+KGV-048,WN18RR (multimodal),KGD-0002,WN18RR,modality/temporal extension,1
+KGV-049,"WN18RR inductive (BLP, Daza et al.)",KGD-0002,WN18RR,split/subset,1
+KGV-050,WN18RR inductive (multimodal),KGD-0002,WN18RR,split/subset,1
