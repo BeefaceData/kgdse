@@ -1,3 +1,9 @@
+> **This repository has moved.** KG-DSE now lives at
+> **https://github.com/gate-institute/kg-datasets** (website:
+> https://gate-institute.github.io/kg-datasets/). This copy is archived and no
+> longer updated (moved 16 Nov 2026). Persistent identifiers:
+> https://w3id.org/kgdse.
+
 # KG-DSE: dataset use in knowledge graph research
 
 A traceable evidence graph that links knowledge graph (KG) research categories, tasks and subtasks to the
